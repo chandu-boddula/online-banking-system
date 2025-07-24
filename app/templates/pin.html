@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    <a href="{% url 'index' %}"><button class="back-btn" >← Back</button></a>
+</div>
+<div class="d1">
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="">ACCOUNT NUMBER</label>
+        <input type="number" name="acc" id=""> <br><br>
+        <!-- <label for="">PIN</label>
+        <input type="number" name="pin1" id="">
+        <label for="">CONFIRM PIN</label>
+        <input type="number" name="pin2" id=""> -->
+        <button type="submit" class="btn1">GENERATE OTP</button>
+        </form>
+        <center>
+            <p>{{ msg }}</p>
+          </center>
+</div>
+{% endblock content %}

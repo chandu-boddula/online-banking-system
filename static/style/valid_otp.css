@@ -1,0 +1,16 @@
+.setbtn{
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.setbtn:hover { 
+    background-color: #0056b3;
+  }

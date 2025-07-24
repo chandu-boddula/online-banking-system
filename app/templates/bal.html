@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% if var %}
+<h1>the balance is : {{bal}}</h1>
+{% else %}
+<div>
+    <a href="{% url 'index' %}"><button class="back-button" >← Back</button></a>
+</div>
+<form action="" method="POST" >
+    {% csrf_token %}
+    <label for="">ACC </label>
+    <input type="number" name="acc" id="">
+    <br><br>
+    <label for="">PIN</label>
+    <input type="password" name="pin" id="" maxlength="4" >
+    <br><br>
+    <button type="submit" class="btn_bal">CHECK BALANCE</button>
+</form>
+{% endif %}
+<center>{% if error %}
+    <h3 style="color: red;">{{ error}}</h3>
+{% endif %}
+{% if success %}
+    <h3 style="color: green;">{{ success}}</h3>
+{% endif %}</center>
+{% endblock content %}

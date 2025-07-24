@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<div>
+    <a href="{% url 'index' %}"><button class="back-button" >← Back</button></a>
+</div>
+<form action="" method="post">
+    {% csrf_token %}
+    <label for="">ACCOUNT NUMBER</label>
+<input type="number" name="acc" id=""> <br><br>
+<label for="">OTP</label>
+<input type="number" name="otp" id="" maxlength="6"> <br><br>
+<label for="">PIN</label>
+<input type="password" name="pin1" id=""> <br><br>
+<label for="">CONFIRM PIN</label>
+<input type="password" name="pin2" id=""> <br><br>
+<button type="submit" class="setbtn">SET PIN</button>
+</form>
+{% endif %}
+<center>{% if error %}
+    <h3 style="color: red;">{{ error}}</h3>
+{% endif %}
+{% if success %}
+    <h3 style="color: green;">{{ success}}</h3>
+{% endif %}</center>
+{% endblock content %}

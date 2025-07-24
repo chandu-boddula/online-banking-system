@@ -1,0 +1,24 @@
+nav{
+  display: flex;
+  background-color: antiquewhite;
+  justify-content: center;
+
+  height: 100px;
+}
+.banklogo {
+    height: 90px;
+    width: 90px;
+    margin-top: 10px;
+    margin-left: -120px;
+    /* padding-left: 60px; */
+}
+h1 {
+  font-family: "Bungee Spice", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 10px;
+
+}
+
+
